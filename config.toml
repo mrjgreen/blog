@@ -1,0 +1,25 @@
+languageCode = "en-gb"
+title = "Joe Green"
+baseurl = "http://example.org/"
+theme = "hyde"
+
+enableRobotsTXT = true
+
+[params]
+    description = "Software Engineering, DevOps & Architecture"
+
+[taxonomies]
+    tag = "tags"
+    series = "series"
+
+[[menu.main]]
+    name = "GitHub"
+    pre = "<i class='fa fa-github'></i>"
+    target = "_blank"
+    identifier = "github"
+    url = "https://github.com/mrjgreen"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
