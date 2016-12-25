@@ -6,3 +6,6 @@ build:
 
 deploy:
 	aws s3 sync public s3://joeg.uk --delete --acl public-read
+
+dev:
+	hugo server -D
