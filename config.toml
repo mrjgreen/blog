@@ -4,6 +4,11 @@ baseurl = "http://joeg.uk/"
 
 enableRobotsTXT = true
 googleAnalytics = "UA-89413599-1"
+PygmentsCodeFences = true
+pygmentsuseclasses = true
+
+[permalinks]
+  post = "/:year/:month/:title/"
 
 [params]
     disqusShortname = "joeg-uk"
