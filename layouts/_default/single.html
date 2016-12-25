@@ -28,11 +28,10 @@
 				</span>
 			</div>
 
-			{{ if and (isset .Site.Params "disqusShortname") (ne .Site.Params.disqusShortname "") }}
-				<h2>Comments</h2>
-				{{ partial "disqus" . }}
+			{{ if .Site.Params.disqusShortname }}
+				{{ partial "disqus.html" . }}
 			{{ end }}
 		</div>
-
+		{{ partial "tail.html" . }}
   </body>
 </html>

@@ -1,12 +1,14 @@
 languageCode = "en-gb"
 title = "Joe Green"
-baseurl = "http://example.org/"
-theme = "hyde"
+baseurl = "http://joeg.uk/"
 
 enableRobotsTXT = true
+googleAnalytics = "UA-89413599-1"
 
 [params]
+    disqusShortname = "joeg-uk"
     description = "Software Engineering, DevOps & Architecture"
+    copyright = " "
 
 [taxonomies]
     tag = "tags"
@@ -18,6 +20,7 @@ enableRobotsTXT = true
     target = "_blank"
     identifier = "github"
     url = "https://github.com/mrjgreen"
+    weight = 100
 
 [sitemap]
   changefreq = "monthly"

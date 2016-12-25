@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://joeg.uk/about/</loc>
+    <lastmod>2016-12-24T00:14:24+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://joeg.uk/post/building-a-blog-2/</loc>
+    <lastmod>2016-12-24T00:02:31+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://joeg.uk/post/building-a-blog-1/</loc>
+    <lastmod>2016-12-23T21:02:31+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://joeg.uk/tags/architecture/</loc>
+    <lastmod>2016-12-24T00:02:31+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://joeg.uk/tags/aws/</loc>
+    <lastmod>2016-12-24T00:02:31+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://joeg.uk/tags/blog/</loc>
+    <lastmod>2016-12-24T00:02:31+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://joeg.uk/series/building-a-blog/</loc>
+    <lastmod>2016-12-24T00:02:31+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://joeg.uk/</loc>
+    <lastmod>2016-12-24T00:14:24+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://joeg.uk/post/</loc>
+    <lastmod>2016-12-24T00:02:31+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://joeg.uk/series/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://joeg.uk/tags/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://joeg.uk/tags/terraform/</loc>
+    <lastmod>2016-12-24T00:02:31+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://joeg.uk/tags/tools/</loc>
+    <lastmod>2016-12-24T00:02:31+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

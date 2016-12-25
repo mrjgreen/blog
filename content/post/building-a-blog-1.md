@@ -5,8 +5,8 @@ tags = ["Blog", "Tools", "Architecture"]
 series = "Building a Blog"
 +++
 
-I recently started a new job working remotely and allowing me more free time, 
-so I decided to start a blog to keep track of my personal projects.
+I recently started a new job working remotely, freeing up the hour or so I'd usually 
+spend commuting each day. My intention is to use this time to start a blog.
 
 For now, the content can wait - first item on the list: **choose a blogging platform** :)
 
@@ -96,7 +96,7 @@ quick at rendering content. It comes with a built in tool for rendering and disp
 your content locally while you write. It also supports [themes](http://themes.gohugo.io/), 
 and happily lots of the Grav themes have been ported for Hugo.
 
-Install:
+Install on MacOS (for other systems just [download the correct release from here](https://github.com/spf13/hugo/releases)):
 
     brew install hugo
     

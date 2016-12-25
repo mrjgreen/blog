@@ -1,0 +1,289 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.18" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Building a Blog - Part 2 &middot; Joe Green</title>
+  
+
+  
+  <link rel="stylesheet" href="/css/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Joe Green" />
+
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://joeg.uk/"><h1>Joe Green</h1></a>
+      <p class="lead">
+       Software Engineering, DevOps &amp; Architecture 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+        <li><a href="/about/"> About </a></li>
+      
+        <li><a href="https://github.com/mrjgreen"> GitHub </a></li>
+      
+    </ul>
+
+    <p> </p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>Building a Blog - Part 2</h1>
+			  	<span class="post-date">Sat, Dec 24, 2016</span>
+				
+			  		<span>| Series: <a href="/series/building-a-blog">Building a Blog</a></span>
+				
+
+				<ul class="tags">
+					
+					<li> <a href="/tags/blog">Blog</a> </li>
+					
+					<li> <a href="/tags/tools">Tools</a> </li>
+					
+					<li> <a href="/tags/architecture">Architecture</a> </li>
+					
+					<li> <a href="/tags/terraform">Terraform</a> </li>
+					
+					<li> <a href="/tags/aws">AWS</a> </li>
+					
+				</ul>
+
+				
+
+<p>Last time, we discussed setting up a blog using <a href="https://gohugo.io">Hugo</a>, a static site generator.</p>
+
+<p>Today, I&rsquo;m going to add to the project with some terraform configuration and a simple
+build and deploy process.</p>
+
+<blockquote>
+<p>TL;DR - I added terraform files in the &ldquo;resources&rdquo; folder to create an S3 bucket
+and a Makefile with a few canned commands for deploying.</p>
+</blockquote>
+
+<p>If you don&rsquo;t already have them, you&rsquo;ll need the following tools:</p>
+
+<ul>
+<li>awscli (<code>brew install awscli</code> or <code>pip install awscli</code>)</li>
+<li>terraform (<code>brew install terraform</code> or <a href="https://www.terraform.io/downloads.html">download for your platform</a>)</li>
+</ul>
+
+<p>You&rsquo;ll need to configure your credentials for the awscli by running:</p>
+
+<pre><code>aws configure
+</code></pre>
+
+<h3 id="creating-the-s3-bucket">Creating the S3 Bucket</h3>
+
+<p>We could very quickly jump onto our AWS console and create an S3 bucket. A few clicks in the
+interface and in seconds we could be up and running.</p>
+
+<p>Well, that&rsquo;s fine for now, but what if we want to add cloudfront capabilities? Or some DNS
+records to route 53? Even with a simple static website, its easy to see how our infrastructure
+could expand.</p>
+
+<p>Using terraform we can store a representation of our infrastructure in code, which will be
+used to drive the API commands to build your stack.</p>
+
+<p>Let&rsquo;s start by creating a folder to hold our terraform files:</p>
+
+<pre><code>mkdir resources/terraform
+</code></pre>
+
+<p>Now we can create a file <code>resources/terraform/s3.tf</code> to hold our S3 Bucket configuration:</p>
+
+<pre><code>resource &quot;aws_s3_bucket&quot; &quot;blog&quot; {
+  bucket = &quot;joeg.uk&quot;
+  acl = &quot;public-read&quot; # Needs to be public for a website
+
+  versioning {
+    enabled = true
+  }
+  
+  website {
+      index_document = &quot;index.html&quot;
+      error_document = &quot;404.html&quot;
+  }
+
+  tags {
+    Application = &quot;Blog&quot;
+    Owner = &quot;Joe Green&quot;
+    Provisioner = &quot;Terraform&quot;
+    ProvisionerSrc = &quot;github.com/mrjgreen/blog&quot;
+  }
+}
+</code></pre>
+
+<blockquote>
+<p><strong>N.B.</strong> It&rsquo;s important to tag all your resources appropriately to help with identification
+and cost breakdowns (E.G. see how much each &ldquo;Application&rdquo; is costing to run).</p>
+</blockquote>
+
+<h4 id="applying-your-infrastructure">Applying your Infrastructure</h4>
+
+<p>You should now be able to navigate to your terraform directory and run a &ldquo;plan&rdquo;.
+A plan is a dry run, and will NOT make any changes to your infrastructure.</p>
+
+<pre><code>cd resources/terraform
+terraform plan
+</code></pre>
+
+<p>Any resource created for AWS will use the terraform AWS provider, which requires a
+default region setting. By default, terraform will ask you to provide this on
+the terminal whenever you run a command.</p>
+
+<pre><code>$ terraform plan
+provider.aws.region
+  The region where AWS operations will take place. Examples
+  are us-east-1, us-west-2, etc.
+
+  Default: us-east-1
+  Enter a value: eu-west-1
+...
+</code></pre>
+
+<p>In order to avoid typing this each time and to ensure all our configuration is held
+in our terraform files, we can create a new file <code>resources/terraform/aws.tf</code> containing:</p>
+
+<pre><code>provider &quot;aws&quot; {
+  region = &quot;eu-west-1&quot;
+}
+</code></pre>
+
+<p>Now when we run <code>terraform plan</code> we will not be prompted for a value, and we should see
+our new infrastructure component ready to create.</p>
+
+<pre><code>$ terraform plan
+Refreshing Terraform state in-memory prior to plan...
+
+// snip...
+
++ aws_s3_bucket.blog
+    acceleration_status:      &quot;&lt;computed&gt;&quot;
+    acl:                      &quot;public-read&quot;
+    arn:                      &quot;&lt;computed&gt;&quot;
+    bucket:                   &quot;joeg.uk&quot;
+    force_destroy:            &quot;false&quot;
+    hosted_zone_id:           &quot;&lt;computed&gt;&quot;
+    region:                   &quot;&lt;computed&gt;&quot;
+    request_payer:            &quot;&lt;computed&gt;&quot;
+    tags.%:                   &quot;4&quot;
+    tags.Application:         &quot;Blog&quot;
+    tags.Owner:               &quot;Joe Green&quot;
+    tags.Provisioner:         &quot;Terraform&quot;
+    tags.ProvisionerSrc:      &quot;github.com/mrjgreen/blog&quot;
+    versioning.#:             &quot;1&quot;
+    versioning.0.enabled:     &quot;true&quot;
+    versioning.0.mfa_delete:  &quot;false&quot;
+    website.#:                &quot;1&quot;
+    website.0.error_document: &quot;404.html&quot;
+    website.0.index_document: &quot;index.html&quot;
+    website_domain:           &quot;&lt;computed&gt;&quot;
+    website_endpoint:         &quot;&lt;computed&gt;&quot;
+
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+</code></pre>
+
+<p>Lets go ahead and apply that:</p>
+
+<pre><code>terraform apply
+</code></pre>
+
+<p>You should see pretty much the same output as before, but with the last line:</p>
+
+<pre><code>Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+</code></pre>
+
+<h4 id="deploying-the-blog">Deploying the Blog</h4>
+
+<p>Deploying should be as easy as running:</p>
+
+<pre><code>aws s3 sync public s3://joeg.uk --delete --acl public-read
+</code></pre>
+
+<p>We can store this in a <code>Makefile</code> in the project root:</p>
+
+<pre><code>all:
+
+build:
+	rm -fr public/*
+	hugo
+
+deploy:
+	aws s3 sync public s3://joeg.uk --delete --acl public-read
+</code></pre>
+
+<p>This will allow us to run simple commands:</p>
+
+<pre><code>make build
+</code></pre>
+
+<p>and</p>
+
+<pre><code>make deploy
+</code></pre>
+
+			</div>
+
+			<div>
+				<span class="next-previous">
+				<a href="http://joeg.uk/post/building-a-blog-1/">&laquo; Building a Blog - Part 1</a>
+				</span>
+				<span class="next-previous">
+				&nbsp;
+				</span>
+			</div>
+
+			
+				<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+    (function() {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'joeg-uk';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+			
+		</div>
+		
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-89413599-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>
