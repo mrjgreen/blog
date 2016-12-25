@@ -151,7 +151,7 @@ pre {
   margin: 0;
   padding: 0;
   color:#fdce93;
-  background-color:#3f3f3f;
+  background-color:#202020;
 }
 code {
   font-size: 70%;
@@ -704,7 +704,7 @@ a.sidebar-nav-item:focus {
 
 /*Syntax Highlighting*/
 
-.highlight code, .highlight pre {color:#fdce93; background-color:#3f3f3f;}
+.highlight code, .highlight pre {color:#fdce93;}
 .highlight .hll {background-color:#222;}
 .highlight .err {color:#e37170;background-color:#3d3535;}
 .highlight .k {color:#f0dfaf;}

@@ -4,8 +4,9 @@ baseurl = "http://joeg.uk/"
 
 enableRobotsTXT = true
 googleAnalytics = "UA-89413599-1"
+
 PygmentsCodeFences = true
-pygmentsuseclasses = true
+PygmentsUseClasses = true
 
 [permalinks]
   post = "/:year/:month/:title/"
