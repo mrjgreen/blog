@@ -9,7 +9,7 @@ When we talk about HA, we are usually discussing a service which must guarantee
 some operational continuity. Often this is expressed as a percentage
 of given period of time for which the service must be "up".
 
-### Example
+## Example
 
 If our API must guarantee 99.99% (four 9s) "uptime" per year, we could use that
 to calculate how much "down time" we are allowed before we miss our SLA 
@@ -23,7 +23,7 @@ Allowed Downtime (mins):  365 * 24 * 60 * 0.0001 = 52.56
 This means we can have only 1 hour of downtime per year, or just under 5 minutes 
 per month.
 
-#### Challenges?
+## Challenges?
 
 Well first of all there is the obvious problem of defining what our application
 looks like when it's "down". There are a multitude of things that could go wrong

@@ -63,10 +63,10 @@ best-practice, to ensure that systems are robust, highly available and easy to s
     
     <item>
       <title>Building a Blog - Part 2</title>
-      <link>http://joeg.uk/post/building-a-blog-2/</link>
-      <pubDate>Sat, 24 Dec 2016 00:02:31 +0000</pubDate>
+      <link>http://joeg.uk/2016/12/building-a-blog---part-2/</link>
+      <pubDate>Fri, 23 Dec 2016 00:02:31 +0000</pubDate>
       
-      <guid>http://joeg.uk/post/building-a-blog-2/</guid>
+      <guid>http://joeg.uk/2016/12/building-a-blog---part-2/</guid>
       <description>
 
 &lt;p&gt;Last time, we discussed setting up a blog using &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;, a static site generator.&lt;/p&gt;
@@ -91,7 +91,7 @@ and a Makefile with a few canned commands for deploying.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;aws configure
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;creating-the-s3-bucket&#34;&gt;Creating the S3 Bucket&lt;/h3&gt;
+&lt;h2 id=&#34;creating-the-s3-bucket&#34;&gt;Creating the S3 Bucket&lt;/h2&gt;
 
 &lt;p&gt;We could very quickly jump onto our AWS console and create an S3 bucket. A few clicks in the
 interface and in seconds we could be up and running.&lt;/p&gt;
@@ -137,7 +137,7 @@ used to drive the API commands to build your stack.&lt;/p&gt;
 and cost breakdowns (E.G. see how much each &amp;ldquo;Application&amp;rdquo; is costing to run).&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h4 id=&#34;applying-your-infrastructure&#34;&gt;Applying your Infrastructure&lt;/h4&gt;
+&lt;h3 id=&#34;applying-your-infrastructure&#34;&gt;Applying your Infrastructure&lt;/h3&gt;
 
 &lt;p&gt;You should now be able to navigate to your terraform directory and run a &amp;ldquo;plan&amp;rdquo;.
 A plan is a dry run, and will NOT make any changes to your infrastructure.&lt;/p&gt;
@@ -213,9 +213,11 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 &lt;pre&gt;&lt;code&gt;Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;deploying-the-blog&#34;&gt;Deploying the Blog&lt;/h4&gt;
+&lt;h2 id=&#34;deploying-the-blog&#34;&gt;Deploying the Blog&lt;/h2&gt;
 
-&lt;p&gt;Deploying should be as easy as running:&lt;/p&gt;
+&lt;p&gt;Running &lt;code&gt;hugo&lt;/code&gt; will generate your static site in a folder called &lt;code&gt;public&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Deploying should be as easy as copying the contents of &lt;code&gt;public&lt;/code&gt; up to the S3 bucket:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;aws s3 sync public s3://joeg.uk --delete --acl public-read
 &lt;/code&gt;&lt;/pre&gt;
@@ -246,10 +248,10 @@ deploy:
     
     <item>
       <title>Building a Blog - Part 1</title>
-      <link>http://joeg.uk/post/building-a-blog-1/</link>
-      <pubDate>Fri, 23 Dec 2016 21:02:31 +0000</pubDate>
+      <link>http://joeg.uk/2016/12/building-a-blog---part-1/</link>
+      <pubDate>Tue, 20 Dec 2016 21:02:31 +0000</pubDate>
       
-      <guid>http://joeg.uk/post/building-a-blog-1/</guid>
+      <guid>http://joeg.uk/2016/12/building-a-blog---part-1/</guid>
       <description>
 
 &lt;p&gt;I recently started a new job working remotely, freeing up the hour or so I&amp;rsquo;d usually
@@ -312,12 +314,11 @@ This means it has to run efficiently on a platform that can scale up if traffic 
 
 &lt;p&gt;Grav is a &amp;ldquo;flat file CMS&amp;rdquo; written in PHP. I downloaded the Grav system with the admin plugin
 and ran it quickly using PHP&amp;rsquo;s builtin web server:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl -fsSL &amp;quot;https://github.com/getgrav/grav/releases/download/1.1.11/grav-admin.zip&amp;quot; &amp;gt; grav-admin.zip
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;curl -fsSL &lt;span class=&#34;s2&#34;&gt;&amp;quot;https://github.com/getgrav/grav/releases/download/1.1.11/grav-admin.zip&amp;quot;&lt;/span&gt; &amp;gt; grav-admin.zip
 unzip grav-admin.zip
-cd grav-admin
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; grav-admin
 php -S localhost:8888 system/router.php
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;I really like Grav. The themes and the admin system look great and are very easy to use.
 It runs out of the box without any initial configuration and is easy to customise with

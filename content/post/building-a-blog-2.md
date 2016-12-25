@@ -22,7 +22,7 @@ You'll need to configure your credentials for the awscli by running:
 
     aws configure
 
-### Creating the S3 Bucket
+## Creating the S3 Bucket
 
 We could very quickly jump onto our AWS console and create an S3 bucket. A few clicks in the
 interface and in seconds we could be up and running.
@@ -66,7 +66,7 @@ resource "aws_s3_bucket" "blog" {
 > **N.B.** It's important to tag all your resources appropriately to help with identification
 and cost breakdowns (E.G. see how much each "Application" is costing to run).
 
-#### Applying your Infrastructure
+### Applying your Infrastructure
 
 You should now be able to navigate to your terraform directory and run a "plan". 
 A plan is a dry run, and will NOT make any changes to your infrastructure.
@@ -143,9 +143,11 @@ You should see pretty much the same output as before, but with the last line:
     Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 
-#### Deploying the Blog
+## Deploying the Blog
 
-Deploying should be as easy as running:
+Running `hugo` will generate your static site in a folder called `public`.
+ 
+Deploying should be as easy as copying the contents of `public` up to the S3 bucket:
 
     aws s3 sync public s3://joeg.uk --delete --acl public-read
 
