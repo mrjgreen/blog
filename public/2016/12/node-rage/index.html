@@ -1,0 +1,165 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.18.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Node Rage &middot; Joe Green</title>
+  
+
+  
+  <link rel="stylesheet" href="/css/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Joe Green" />
+
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://joeg.uk/"><h1>Joe Green</h1></a>
+      <p class="lead">
+       Software Engineering, DevOps &amp; Architecture 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+        <li><a href="/about/"> About </a></li>
+      
+        <li><a href="https://github.com/mrjgreen"> GitHub </a></li>
+      
+    </ul>
+
+    <p> </p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>Node Rage</h1>
+			  	<span class="post-date">Tue, Dec 20, 2016</span>
+				
+
+				<ul class="tags">
+					
+					<li> <a href="/tags/react">React</a> </li>
+					
+					<li> <a href="/tags/front-end">Front End</a> </li>
+					
+					<li> <a href="/tags/node">Node</a> </li>
+					
+				</ul>
+
+				<p>Front end development has changed. Again. Now we’ve got Angular 2. And React. And you can use ES6. And TypeScript. And ES2015. And ES2016. And ES2017. It seems like a lot, but it’s okay, there’s tooling; you can “just install it with npm”</p>
+
+<pre><code>npm install babel-core babel-loader babel-preset-es2015 babel-preset-react --save
+</code></pre>
+
+<p>Aaaand 15 minutes later&hellip;</p>
+
+<p><img src="/images/node-rage/npm-terminal.png" alt="NPM" /></p>
+
+<p>&hellip;I’m still watching this spinning thing, with no idea what the fuck is going on.</p>
+
+<p>Fuck you nodejs. You ruin everything. I’m going to make a coffee while I try to calm my incandescent rage.</p>
+
+<p>I’m back and npm has finally agreed to release the 8 cores it’s been holding hostage for the last 15 minutes while installing the 4 packages I’ve asked for. Now I can start my project! Like Alice, I dive further in this rabbit hole of chaos and “webpack” my single solitary .jsx project file (The webpack config file itself is already the size and complexity of a medium sized application. Note to self: refactor config file).</p>
+
+<pre><code>./node_modules/.bin/webpack
+</code></pre>
+
+<p>Nope.</p>
+
+<pre><code>ERROR in Cannot find module 'babel-runtime/helpers/typeof'
+</code></pre>
+
+<p>Great. Another coffee I think.</p>
+
+<p>Back again. The shaking hasn’t stopped yet, but with caffeine fueled conviction I open google and hunt down my elusive module.</p>
+
+<p>Ahh, some success! Others have had this error, and provided sound advice:</p>
+
+<blockquote>
+<p>“Reinstall babel-loader”</p>
+
+<p><em><a href="https://github.com/babel/babel-loader/issues/39#issuecomment-78185333">https://github.com/babel/babel-loader/issues/39#issuecomment-78185333</a></em></p>
+</blockquote>
+
+<p>Oh god no, not another 15 minutes watching that shit spinner! I’ll just read further and make sure this is definitely the cause of my issue&hellip;</p>
+
+<blockquote>
+<p>“Most likely. npm is really weird most of the time.”</p>
+
+<p><em><a href="https://github.com/babel/babel-loader/issues/39#issuecomment-78188663">https://github.com/babel/babel-loader/issues/39#issuecomment-78188663</a></em></p>
+</blockquote>
+
+<p>Well, with indisputable facts like that&hellip;</p>
+
+<p>For good measure, I’ve decided to upgrade my version of node and npm too. Thankfully it’s been a month or so since I’ve been forced to use them, so they’ll be out of date. Probably by about 23 major versions.</p>
+
+<p>After another npm install and yet another coffee, my index file has been webpacked. Whatever that is. Maybe I’ll take a look in the “transpiled” file it built to see if I can spot my few lines of code.</p>
+
+<p>I can’t.</p>
+
+<p>But what I can spot is 21,788 lines of JavaScript, in a file that’s 731Kb. Are you shitting me? How am I supposed to deliver that to the users? On a fucking memory stick?</p>
+
+<p>Anyway, I opened it in my browser and it worked. Fucking brilliant.</p>
+
+<p><img src="/images/node-rage/todo-app-shot.png" alt="NPM" /></p>
+
+			</div>
+
+			<div>
+				<span class="next-previous">
+				&nbsp;
+				</span>
+				<span class="next-previous">
+				&nbsp;
+				</span>
+			</div>
+
+			
+				<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+    (function() {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'joeg-uk';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+			
+		</div>
+		
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-89413599-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>

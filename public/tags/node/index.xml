@@ -1,65 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Joe Green</title>
-    <link>http://joeg.uk/index.xml</link>
-    <description>Recent content on Joe Green</description>
+    <title>Node on Joe Green</title>
+    <link>http://joeg.uk/tags/node/index.xml</link>
+    <description>Recent content in Node on Joe Green</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright> </copyright>
-    <lastBuildDate>Sat, 24 Dec 2016 00:14:24 +0000</lastBuildDate>
-    <atom:link href="http://joeg.uk/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>About</title>
-      <link>http://joeg.uk/about/</link>
-      <pubDate>Sat, 24 Dec 2016 00:14:24 +0000</pubDate>
-      
-      <guid>http://joeg.uk/about/</guid>
-      <description>
-
-&lt;p&gt;I&amp;rsquo;m a software engineer with over 10 years of experience and I&amp;rsquo;ve recently been
-spending my time designing and implementing complex, multi-tier systems for processing
-terabytes of event data.&lt;/p&gt;
-
-&lt;p&gt;I take pride in working to high standards of quality and strive to improve on
-best-practice, to ensure that systems are robust, highly available and easy to scale.&lt;/p&gt;
-
-&lt;h3 id=&#34;languages-tools&#34;&gt;Languages &amp;amp; Tools&lt;/h3&gt;
-
-&lt;p&gt;I have recently been working with:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;PHP&lt;/li&gt;
-&lt;li&gt;Python&lt;/li&gt;
-&lt;li&gt;Go&lt;/li&gt;
-&lt;li&gt;C/C++&lt;/li&gt;
-&lt;li&gt;Node&lt;/li&gt;
-&lt;li&gt;JavaScript &amp;amp; Frameworks (Eg. AngularJS)&lt;/li&gt;
-&lt;li&gt;MySQL/MariaDB&lt;/li&gt;
-&lt;li&gt;Postgres&lt;/li&gt;
-&lt;li&gt;MongoDB&lt;/li&gt;
-&lt;li&gt;Redis&lt;/li&gt;
-&lt;li&gt;Docker&lt;/li&gt;
-&lt;li&gt;Amazon Web Services (+Terraform)&lt;/li&gt;
-&lt;li&gt;Provisioning (Puppet, Ansible)&lt;/li&gt;
-&lt;li&gt;Continuous Integration (Jenkins, Concourse CI)&lt;/li&gt;
-&lt;li&gt;Monitoring &amp;amp; Logging (ELK, Graylog, Graphite, Collectd)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;projects&#34;&gt;Projects&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/mrjgreen/phroute&#34;&gt;Phroute - A fast PHP router&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/mrjgreen/blog&#34;&gt;Blog - This project&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/mrjgreen/code-kata&#34;&gt;Code Kata - DS and Algorithms in different languages&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/mrjgreen/db-sync&#34;&gt;DBSync - A CLI tool for federating data between MySQL servers&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/mrjgreen/terraform-xp&#34;&gt;Terraform-XP - A CLI wrapper around terraform&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
+    <atom:link href="http://joeg.uk/tags/node/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Node Rage</title>
