@@ -5,7 +5,7 @@ tags = ["React", "Front End", "JavaScript"]
 +++
 
 I'm using react for the first time.
-
+<!--more-->
 ~~~JavaScript
 var ToDo = React.createClass({
     render: function() {
