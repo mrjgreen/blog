@@ -3,7 +3,6 @@ title = "Building a Blog - Part 1"
 date = "2016-12-20T21:02:31Z"
 tags = ["Blog", "Tools", "Architecture"]
 series = "Building a Blog"
-draft = true
 +++
 
 I recently started a new job working remotely, freeing up the hour or so I'd usually 

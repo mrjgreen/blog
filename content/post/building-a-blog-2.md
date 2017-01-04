@@ -3,7 +3,6 @@ title = "Building a Blog - Part 2"
 date = "2016-12-23T00:02:31Z"
 tags = ["Blog", "Tools", "Architecture", "Terraform", "AWS"]
 series = "Building a Blog"
-draft = true
 +++
 
 Last time, we discussed setting up a blog using [Hugo](https://gohugo.io), a static site generator.

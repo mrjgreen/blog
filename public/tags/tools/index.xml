@@ -1,115 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Joe Green</title>
-    <link>http://joeg.uk/post/index.xml</link>
-    <description>Recent content in Posts on Joe Green</description>
+    <title>Tools on Joe Green</title>
+    <link>http://joeg.uk/tags/tools/index.xml</link>
+    <description>Recent content in Tools on Joe Green</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright> </copyright>
-    <lastBuildDate>Wed, 04 Jan 2017 09:05:10 +0000</lastBuildDate>
-    <atom:link href="http://joeg.uk/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>React</title>
-      <link>http://joeg.uk/2017/01/react/</link>
-      <pubDate>Wed, 04 Jan 2017 09:05:10 +0000</pubDate>
-      
-      <guid>http://joeg.uk/2017/01/react/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m using react for the first time.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-JavaScript&#34; data-lang=&#34;JavaScript&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ToDo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;React&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;createClass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;
-    &lt;span class=&#34;nx&#34;&gt;render&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;props&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;taskName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/li&amp;gt;);&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
-
-&lt;span class=&#34;nx&#34;&gt;ReactDOM&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;render&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; 
-    &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ToDo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;App&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/h1&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ToDo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;taskName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Write blog post about JavaScript&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;getElementById&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Seeing these inline templates along with the code seems strangely familiar.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-PHP&#34; data-lang=&#34;PHP&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;$time&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;sprintf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;%.4f&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$t2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$t1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;$production&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;&amp;lt;div style=&amp;quot;border: 1px blue;&amp;quot;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    &amp;lt;form&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        &amp;lt;input value=&amp;quot;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;quot; /&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    &amp;lt;/form&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Rasmus Lerdorf would be proud&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Node Rage</title>
-      <link>http://joeg.uk/2017/01/node-rage/</link>
-      <pubDate>Tue, 03 Jan 2017 21:02:31 +0000</pubDate>
-      
-      <guid>http://joeg.uk/2017/01/node-rage/</guid>
-      <description>&lt;p&gt;Front end development has changed. Again. Now we’ve got Angular 2. And React. And you can use ES6. And TypeScript. And ES2015. And ES2016. And ES2017. It seems like a lot, but it’s okay, there’s tooling; you can “just install it with npm”&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install babel-core babel-loader babel-preset-es2015 babel-preset-react --save
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Aaaand 15 minutes later&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://joeg.uk/images/node-rage/npm-terminal.png&#34; alt=&#34;NPM&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;hellip;I’m still watching this spinning thing, with no idea what the fuck is going on.&lt;/p&gt;
-
-&lt;p&gt;Fuck you nodejs. You ruin everything. I’m going to make a coffee while I try to calm my incandescent rage.&lt;/p&gt;
-
-&lt;p&gt;I’m back and npm has finally agreed to release the 8 cores it’s been holding hostage for the last 15 minutes while installing the 4 packages I’ve asked for. Now I can start my project! Like Alice, I dive further in this rabbit hole of chaos and “webpack” my single solitary .jsx project file (The webpack config file itself is already the size and complexity of a medium sized application. Note to self: refactor config file).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;./node_modules/.bin/webpack
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Nope.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ERROR in Cannot find module &#39;babel-runtime/helpers/typeof&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Great. Another coffee I think.&lt;/p&gt;
-
-&lt;p&gt;Back again. The shaking hasn’t stopped yet, but with caffeine fueled conviction I open google and hunt down my elusive module.&lt;/p&gt;
-
-&lt;p&gt;Ahh, some success! Others have had this error, and provided sound advice:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“Reinstall babel-loader”&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/babel/babel-loader/issues/39#issuecomment-78185333&#34;&gt;https://github.com/babel/babel-loader/issues/39#issuecomment-78185333&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Oh god no, not another 15 minutes watching that shit spinner! I’ll just read further and make sure this is definitely the cause of my issue&amp;hellip;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“Most likely. npm is really weird most of the time.”&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/babel/babel-loader/issues/39#issuecomment-78188663&#34;&gt;https://github.com/babel/babel-loader/issues/39#issuecomment-78188663&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Well, with indisputable facts like that&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;For good measure, I’ve decided to upgrade my version of node and npm too. Thankfully it’s been a month or so since I’ve been forced to use them, so they’ll be out of date. Probably by about 23 major versions.&lt;/p&gt;
-
-&lt;p&gt;After another npm install and yet another coffee, my index file has been webpacked. Whatever that is. Maybe I’ll take a look in the “transpiled” file it built to see if I can spot my few lines of code.&lt;/p&gt;
-
-&lt;p&gt;I can’t.&lt;/p&gt;
-
-&lt;p&gt;But what I can spot is 21,788 lines of JavaScript, in a file that’s 731Kb. Are you shitting me? How am I supposed to deliver that to the users? On a fucking memory stick?&lt;/p&gt;
-
-&lt;p&gt;Anyway, I opened it in my browser and it worked. Fucking brilliant.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://joeg.uk/images/node-rage/todo-app-shot.png&#34; alt=&#34;NPM&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
+    <atom:link href="http://joeg.uk/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Building a Blog - Part 2</title>

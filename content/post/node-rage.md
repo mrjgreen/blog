@@ -1,7 +1,7 @@
 +++
 title = "Node Rage"
-date = "2016-12-20T21:02:31Z"
-tags = ["React", "Front End", "Node"]
+date = "2017-01-03T21:02:31Z"
+tags = ["React", "Front End", "JavaScript", "NPM"]
 +++
 
 Front end development has changed. Again. Now we’ve got Angular 2. And React. And you can use ES6. And TypeScript. And ES2015. And ES2016. And ES2017. It seems like a lot, but it’s okay, there’s tooling; you can “just install it with npm”

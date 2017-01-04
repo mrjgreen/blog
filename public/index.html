@@ -55,18 +55,70 @@
       
       <div class="post">
         <h1 class="post-title">
-          <a href="http://joeg.uk/2016/12/node-rage/">
+          <a href="http://joeg.uk/2017/01/react/">
+            React
+          </a>
+        </h1>
+
+        <span class="post-date">Wed, Jan 4, 2017</span>
+
+        I&rsquo;m using react for the first time.
+var ToDo = React.createClass({ render: function() { return (&lt;li&gt;{this.props.taskName}&lt;/li&gt;); } }); ReactDOM.render( &lt;h1&gt;ToDo App&lt;/h1&gt; &lt;ToDo taskName=&quot;Write blog post about JavaScript&quot;/&gt;, document.getElementById(&quot;container&quot;) );  Seeing these inline templates along with the code seems strangely familiar.
+&lt;?php $time = sprintf(&#39;%.4f&#39;, ($t2 - $t1) ); $production = true; ?&gt; &lt;div style=&quot;border: 1px blue;&quot;&gt; &lt;form&gt; &lt;input value=&quot;&lt;?php echo $time; ?&gt;&quot; /&gt; &lt;/form&gt; &lt;/div&gt;  Rasmus Lerdorf would be proud&hellip;
+        <div class="read-more-link">
+          <a href="/2017/01/react/">Read More…</a>
+        </div>
+      </div>
+      
+      <div class="post">
+        <h1 class="post-title">
+          <a href="http://joeg.uk/2017/01/node-rage/">
             Node Rage
           </a>
         </h1>
 
-        <span class="post-date">Tue, Dec 20, 2016</span>
+        <span class="post-date">Tue, Jan 3, 2017</span>
 
         Front end development has changed. Again. Now we’ve got Angular 2. And React. And you can use ES6. And TypeScript. And ES2015. And ES2016. And ES2017. It seems like a lot, but it’s okay, there’s tooling; you can “just install it with npm”
 npm install babel-core babel-loader babel-preset-es2015 babel-preset-react --save  Aaaand 15 minutes later&hellip;
 &hellip;I’m still watching this spinning thing, with no idea what the fuck is going on.
         <div class="read-more-link">
-          <a href="/2016/12/node-rage/">Read More…</a>
+          <a href="/2017/01/node-rage/">Read More…</a>
+        </div>
+      </div>
+      
+      <div class="post">
+        <h1 class="post-title">
+          <a href="http://joeg.uk/2016/12/building-a-blog---part-2/">
+            Building a Blog - Part 2
+          </a>
+        </h1>
+
+        <span class="post-date">Fri, Dec 23, 2016</span>
+
+        Last time, we discussed setting up a blog using Hugo, a static site generator.
+Today, I&rsquo;m going to add to the project with some terraform configuration and a simple build and deploy process.
+ TL;DR - I added terraform files in the &ldquo;resources&rdquo; folder to create an S3 bucket and a Makefile with a few canned commands for deploying.
+ If you don&rsquo;t already have them, you&rsquo;ll need the following tools:
+        <div class="read-more-link">
+          <a href="/2016/12/building-a-blog---part-2/">Read More…</a>
+        </div>
+      </div>
+      
+      <div class="post">
+        <h1 class="post-title">
+          <a href="http://joeg.uk/2016/12/building-a-blog---part-1/">
+            Building a Blog - Part 1
+          </a>
+        </h1>
+
+        <span class="post-date">Tue, Dec 20, 2016</span>
+
+        I recently started a new job working remotely, freeing up the hour or so I&rsquo;d usually spend commuting each day. My intention is to use this time to start a blog.
+For now, the content can wait - first item on the list: choose a blogging platform :)
+ TL;DR - I settled on Hugo, a static site generator which allows me to keep the site in version control on github, and deploy to an S3 bucket managed via terraform.
+        <div class="read-more-link">
+          <a href="/2016/12/building-a-blog---part-1/">Read More…</a>
         </div>
       </div>
       

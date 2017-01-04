@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>React on Joe Green</title>
-    <link>http://joeg.uk/tags/react/index.xml</link>
-    <description>Recent content in React on Joe Green</description>
+    <title>Javascript on Joe Green</title>
+    <link>http://joeg.uk/tags/javascript/index.xml</link>
+    <description>Recent content in Javascript on Joe Green</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright> </copyright>
-    <atom:link href="http://joeg.uk/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://joeg.uk/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>React</title>

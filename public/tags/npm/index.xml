@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Node on Joe Green</title>
-    <link>http://joeg.uk/tags/node/index.xml</link>
-    <description>Recent content in Node on Joe Green</description>
+    <title>Npm on Joe Green</title>
+    <link>http://joeg.uk/tags/npm/index.xml</link>
+    <description>Recent content in Npm on Joe Green</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright> </copyright>
-    <atom:link href="http://joeg.uk/tags/node/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://joeg.uk/tags/npm/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Node Rage</title>
-      <link>http://joeg.uk/2016/12/node-rage/</link>
-      <pubDate>Tue, 20 Dec 2016 21:02:31 +0000</pubDate>
+      <link>http://joeg.uk/2017/01/node-rage/</link>
+      <pubDate>Tue, 03 Jan 2017 21:02:31 +0000</pubDate>
       
-      <guid>http://joeg.uk/2016/12/node-rage/</guid>
+      <guid>http://joeg.uk/2017/01/node-rage/</guid>
       <description>&lt;p&gt;Front end development has changed. Again. Now we’ve got Angular 2. And React. And you can use ES6. And TypeScript. And ES2015. And ES2016. And ES2017. It seems like a lot, but it’s okay, there’s tooling; you can “just install it with npm”&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;npm install babel-core babel-loader babel-preset-es2015 babel-preset-react --save
