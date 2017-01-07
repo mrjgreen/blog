@@ -34,7 +34,7 @@ Ahh, some success! Others have had this error, and provided sound advice:
 >
 > *https://github.com/babel/babel-loader/issues/39#issuecomment-78185333*
 
-Oh god no, not another 15 minutes watching that shit spinner! I’ll just read further and make sure this is definitely the cause of my issue...
+Oh god no, not another 15 minutes watching that spinner! I’ll just read further and make sure this is definitely the cause of my issue...
 
 > “Most likely. npm is really weird most of the time.”
 >
