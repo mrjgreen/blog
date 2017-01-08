@@ -9,7 +9,7 @@ I recently started a new job working remotely, freeing up the hour or so I'd usu
 spend commuting each day. My intention is to use this time to start a blog.
 
 For now, the content can wait - first item on the list: **choose a blogging platform** :)
-
+<!--more-->
 > TL;DR - I settled on [Hugo](https://gohugo.io), a static site generator which 
 allows me to keep the site in version control on github, and deploy to an S3 bucket
 managed via terraform.

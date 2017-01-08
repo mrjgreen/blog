@@ -9,7 +9,7 @@ Last time, we discussed setting up a blog using [Hugo](https://gohugo.io), a sta
 
 Today, I'm going to add to the project with some terraform configuration and a simple
 build and deploy process.
-
+<!--more-->
 > TL;DR - I added terraform files in the "resources" folder to create an S3 bucket 
 and a Makefile with a few canned commands for deploying.
 

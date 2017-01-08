@@ -5,6 +5,7 @@ tags = ["React", "Front End", "JavaScript", "NPM"]
 +++
 
 Front end development has changed. Again. Now we’ve got Angular 2. And React. And you can use ES6. And TypeScript. And ES2015. And ES2016. And ES2017. It seems like a lot, but it’s okay, there’s tooling; you can “just install it with npm”
+<!--more-->
 
     npm install babel-core babel-loader babel-preset-es2015 babel-preset-react --save
 
@@ -16,7 +17,9 @@ Aaaand 15 minutes later...
 
 Fuck you nodejs. You ruin everything. I’m going to make a coffee while I try to calm my incandescent rage.
 
-I’m back and npm has finally agreed to release the 8 cores it’s been holding hostage for the last 15 minutes while installing the 4 packages I’ve asked for. Now I can start my project! Like Alice, I dive further in this rabbit hole of chaos and “webpack” my single solitary .jsx project file (The webpack config file itself is already the size and complexity of a medium sized application. Note to self: refactor config file). 
+I’m back and npm has finally agreed to release the 8 cores it’s been holding hostage for the last 15 minutes while installing the 4 packages I’ve asked for. 
+Now I can start my project! Like Alice, I dive further in this rabbit hole of chaos and “webpack” my single solitary .jsx project file 
+(The webpack config file itself is already the size and complexity of a medium sized application. *Note to self: refactor config file*). 
 
     ./node_modules/.bin/webpack
 
@@ -48,7 +51,7 @@ After another npm install and yet another coffee, my index file has been webpack
 
 I can’t. 
 
-But what I can spot is 21,788 lines of JavaScript, in a file that’s 731Kb. Are you shitting me? How am I supposed to deliver that to the users? On a fucking memory stick?
+But what I can spot is 21,788 lines of JavaScript, in a file that’s 731Kb. Are you shitting me? How am I supposed to deliver that to the users? On a memory stick?
 
 Anyway, I opened it in my browser and it worked. Fucking brilliant.
 

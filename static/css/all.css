@@ -388,6 +388,11 @@ a.pagination-item:hover {
 
 .next-previous {
   display: block;
+  margin: 10px 0;
+}
+
+.next-previous:last-child {
+  text-align: right;
 }
 
 @media (min-width: 30em) {
@@ -397,14 +402,11 @@ a.pagination-item:hover {
     width: 50%;
     margin-bottom: 20px;
   }
-  .next-previous:last-child {
-    text-align: right;
-  }
 }
 
 
 .tags{
-  margin:10px 0 20px;
+  margin:10px 0 10px;
   padding:0 0 2px 0;
   overflow: hidden;
   list-style:none;
@@ -417,7 +419,7 @@ a.pagination-item:hover {
 }
 
 .tags a{
-  margin:0 10px 0 0;
+  margin:0 10px 3px 0;
   padding:0 10px 0 20px;
   background:#268bd2;
   color:#fff;
