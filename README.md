@@ -11,7 +11,7 @@ Install Hugo and Pygments (for syntax highlighting)
 
 Run local server
 
-    make dev
+    make run
 
 Build site
 

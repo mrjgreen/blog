@@ -135,7 +135,7 @@ documentation at all and leave it for your colleagues to figure out how it works
 
 ## When You Can't Avoid Documentation
 
-There are scenarios where documentation *is* appropriate and should be encouraged. 
+There are scenarios where documentation *is* appropriate and should be encouraged.
 
 ### Make it Easy and Consistent
 
@@ -172,9 +172,12 @@ your ideas ahead of the discussion and share any outcomes with their team.
 In my opinion this is probably the most important thing to capture in writing. Lots of organisations have "unspoken" 
 policies and best practices, but without a clear document to reference, these practices are likely to mutate and 
 meander over time. Trying new techniques and developing ideas is an absolute necessity to keep ahead of competition, 
-but too much unchecked variation can cause serious problems *ETC*
+but too much unchecked variation can cause serious problems.
 
 ##### Meeting Agendas, Notes and Action Points
+
+Writing down topics for discussion ahead of meetings can avoid those awful meandering sessions where the point of the
+meeting is lost. Formalising action points is a great way to ensure the time spent in meetings isn't wasted.
 
 ##### Incident Reports
 
