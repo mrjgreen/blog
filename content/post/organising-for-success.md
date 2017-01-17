@@ -7,9 +7,10 @@ draft = true
 
 +++
 
-<!--more-->
-> TL;DR - Having policies in place for the technical cornerstones of your organisation
+Having policies in place for the technical cornerstones of your organisation
 can prevent "accidental anarchy" within your teams.
+
+<!--more-->
 
 ### Cornerstones
 
@@ -23,16 +24,4 @@ can prevent "accidental anarchy" within your teams.
  * Deployment
  * Logging and Monitoring
 
-
-### Summary
-
-The most important thing is to put in place the right structures for discussing, documenting, 
-disseminating and iterating upon the policies you put in place.
-
-
- * Organisations start small
- * 1 or 2 people manage everything
- * "Oh it'll never be that big"
- * "It's going to be huge!"
- * "Works of Art" and "Special Snowflakes"
  
