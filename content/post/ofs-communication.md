@@ -7,4 +7,21 @@ draft = true
 
 +++
 
+In the last post we talked about documentation and how to avoid the need to have it.
 
+We did discuss a few scenarios where 
+
+
+#### How to communicate processes
+
+
+#### Code review
+
+
+#### Stand ups
+
+
+#### Video Calls
+
+
+#### IM

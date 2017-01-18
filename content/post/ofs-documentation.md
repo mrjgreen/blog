@@ -43,14 +43,13 @@ git repository should have one. Below are a few suggestions on what to put in yo
 ### Automation
 
 Reducing the number of steps a team member has to take to complete a task reduces the amount of documentation 
-you need to write to support it.
+you need to write in order to support it.
 
 If you have a section in your readme for "Installation" and there are 7 commands to run, you should consider 
 condensing that into a single command.
 
-A useful thing to do is to include a `Makefile` in your application. 
-[Make](https://www.gnu.org/software/make/) is a tool available by default on most unix platforms. It's capable
-of managing complex build tasks, but it's also useful for running our simple commands.
+A simple way to do this is to include a `Makefile` in your application. 
+[Make](https://www.gnu.org/software/make/) is a tool available by default on most unix platforms.
 
 Let's say your readme suggests the following build process for a PHP application:
 
@@ -83,7 +82,7 @@ So much cleaner!
 ### Consistency
 
 This leads on nicely from the point above. The idea is that teams should be able to work on 
-any project without needing to re-learn how to build it or how to get its tests to run. Importantly,
+any project without needing to re-learn how to build it or how to get its tests to run. Importantly, 
 you don't have to document the setup for every application individually.
 
 Github have a requirement that their applications support a common build pattern, which they have
@@ -117,7 +116,7 @@ deploy:
 ~~~
 
 Without this file, each of these tasks would require documentation and when the process changes the chances
-are that your documentation would fall out of step. Now, you can freely change your processes and your makefile
+are good that your documentation would fall out of step. Now, you can freely change your processes and your makefile
 will prevent the need to change your docs!
 
 ### Open Source
@@ -135,7 +134,9 @@ documentation at all and leave it for your colleagues to figure out how it works
 
 ## When You Can't Avoid Documentation
 
-There are scenarios where documentation *is* appropriate and should be encouraged.
+There are scenarios where documentation *is* appropriate and should be encouraged. 
+In these circumstances we should be sure to have policies in place to make documentation as 
+painless as possible.
 
 ### Make it Easy and Consistent
 
@@ -154,18 +155,24 @@ Some ideas for things you may wish to spend time documenting:
 
 ##### High-level Architectural Diagrams
 
-The integration points between systems can be hard to map. Even harder is finding a responsible 
-person to keep them up-to-date. If you have a "Chief-Architect" or similar position, then this may be an ideal
-task for them. It requires communication and collaboration with every team in your organisation.
+As systems begin to grow it's often impossible for even the longest serving, most experienced
+team member to visualise the entire platform architecture.
+
+Finding a person to be responsible for keeping system diagrams up-to-date can be a challenge.
+It requires communication and collaboration with every team in your organisation, so this is
+definitely a task for someone who enjoys teamwork.
 
 Avoiding unnecessary detail here is important, so this could be nothing more than a few labelled boxes with 
 lines between them. Adding links to code repositories will allow teams to drill in for more information.
+
+The key to keeping these diagrams relevant is to use them every time you discuss the system. If you find that the system
+has changed and the diagram is out of date, you can modify it immediately.
 
 ##### Proposals / RFCs
 
 Initiatives that will affect other teams or the whole company will most likely need to be discussed with representatives
 from those teams. Writing down your proposal will help to clarify your own thoughts, while allowing people to consider
-your ideas ahead of the discussion and share any outcomes with their team.
+your ideas ahead of the discussion and share any outcomes with the team.
 
 ##### Organisational Policies (E.g. App Security, Data Retention)
 
@@ -181,7 +188,46 @@ meeting is lost. Formalising action points is a great way to ensure the time spe
 
 ##### Incident Reports
 
+We all know things go wrong. Some systems have more problems than others, but even with the 
+best platforms there are unexpected problems that inevitably affect your uptime.
+
+Don't be afraid of these problems. Embrace them and learn from them. Most importantly, track them.
+Set up a template in your documentation area requiring:
+
+ * a date
+ * a summary of the issue
+ * impact, affected systems
+ * root cause
+ * further actions to prevent recurrence **with a responsible person assigned**
+ 
+An important idea here is to be as open and transparent as possible with your internal teams, and where appropriate
+provide a detailed break down of the root cause to your external users. 
+
+> If there are security concerns there is obviously a need to apply a patch before releasing specific details of the 
+exploit, but you may wish to provide users with an overview of the impact as soon as possible. Especially where data has
+been compromised.
+
+We will discuss in the next topic "Communication" how best to disseminate this kind of information to your teams and
+your users.
 
 ##### Complex Investigations
 
+I've seen teams waste endless hours investigating a long standing "known-issue", only to arrive at the same
+conclusion they did last time they looked into it... And the time before that. When you start trying to find the source 
+of that bottleneck that slows down the system for 20 minutes at 5:30am on the second Tuesday of every month, you won't
+know for sure that you are going to be able to get to the bottom of it before a higher priority task comes in.
 
+It takes just a few minutes to open up a document, paste in that terminal output, upload that log file and add 
+some notes, but it could save you hours when you come back to the problem now that you and your team don't 
+have to start from scratch.
+
+### Promote Document Sharing and Review During Regular Meetings
+
+So now we have gone to the pain of writing this documentation we need to make sure its used as a reference
+for discussion, and regularly updated.
+
+It sounds like a big undertaking but this may actually be something you are already doing and the only
+change we need to make is to add focus to particular meetings where documentation could be used to help 
+convey information.
+
+Find out more in the next post in this series on "Communication".
