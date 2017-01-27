@@ -16,7 +16,7 @@ Yep, that does sound like a waste of time.
 <!--more-->
 In fact it's no big revelation to go a step further and say that
 this kind of documentation is down right harmful. We know how difficult it is to get our heads
-round a project, without being misled by dodgey diagrams. It can also prevent teams
+round a project, without being misled by dodgy diagrams. It can also prevent teams
 from wanting to improve applications ("If I change this, then I'll have to edit those awful docs!").
  
 ## Avoiding Documentation
