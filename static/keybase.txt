@@ -1,0 +1,67 @@
+==================================================================
+https://keybase.io/mrjgreen
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://joeg.uk
+  * I am mrjgreen (https://keybase.io/mrjgreen) on keybase.
+  * I have a public key with fingerprint 3A50 23D5 9E33 34E0 4EF7  34D5 D482 E4D1 0DA1 69E9
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01018100cf30a1813595c301f9808d4ce5a3cdcfce468ac82728dfd3d5966b13e5e50a",
+            "fingerprint": "3a5023d59e3334e04ef734d5d482e4d10da169e9",
+            "host": "keybase.io",
+            "key_id": "d482e4d10da169e9",
+            "kid": "01018100cf30a1813595c301f9808d4ce5a3cdcfce468ac82728dfd3d5966b13e5e50a",
+            "uid": "c9767f4a969b010c0810e949912ba319",
+            "username": "mrjgreen"
+        },
+        "service": {
+            "hostname": "joeg.uk",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1485818106,
+    "expire_in": 157680000,
+    "prev": "17b863022cccf29798882264143bb3e3c615577c15dc9c1f924471f25356f3ba",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2
+
+owGtUltoE0EUTWxaEzGpj4JWRWVbEaTGnZ2dfQm+ECvaioiIfrTp7uxsuibdjZtN
+fQaLH4Kith8qGl8VsSqign6IFRXpR5FGRClUpVKF4qM+wAdKlVBni/756fzMzOWc
+c8893LZwkS/o790z+Dh81nzn73mn+Ta2PgjsZDRb384oO5kEGb1IUidpN5YwdUZh
+WMACCbAsNiCr0hdEMsKQBYYssZLOY4JUiHVsYMILkoolTuQk3dChjmRB0AAkiCBW
+ZaoYw7TixEk5puVSWagilvNABELIE5Ynhgh5Hem8xBFeB6yuAkEmMiU22mmPQc1p
+appETZvW6Cc2au8f+P/sOzMqh2VREA1elQVZo9KYpdpE5mUZcJoKgdc3kyaOpTYR
+im5yNscdQiwmW8XQarOJiResN8kfxGabxKOZBKWlHNu1sZ2kxUbXTSkex92e8kBb
+iRb7Q49ppqXTBCmhmThp07YYBVAkdk1PD/ASkrx5hSqGbEuZDomZHgKJgsTS47Uh
+zVQSiJokQJbjMMbGOk4WZUmSOE7gAQ81DRKIBYCQKGKAdCxjGhfH8yIwOASRYEDN
+SyRNtlg2o0DqU41TzbQZt1Q34xAmO26ff0bA5w/6SorHeLvlGxea8Hfh9g+OLZS3
+rpvVK5BvFUWo7PXT7tV1x9e2bVneXpMbyhU6bg232qXVnVMbjPLaRc/LPx/rKI3k
+B7LSyMOT0eolTT2XlPzUOTdndgxHlh6q//z92ZHIm6SaObqm897Ql9CqTwc3tER3
+9c0FMyrLplTWn58fKui568XhJeMrEoFKJ3vBhOH7HxuKeWnrgdoPPxtvXOYKSjDy
+pS7n7z24etm0vl8jQ1a+beHeKxdbeq51nVs50i53Hb7jLzk978fV9s5rL4vWv/24
+Y2120fsV03KvBu5W5xenJrXIS5X7p/SjydvDk6cP7l4Q3lTztW5ioP9M8+zS0KVH
+yyb1n5i/8In980UE7QqWdH/7DQ==
+=cC9p
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mrjgreen
+
+==================================================================
