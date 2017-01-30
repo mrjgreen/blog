@@ -223,8 +223,8 @@ have to start from scratch.
 
 ### Promote Document Sharing and Review During Regular Meetings
 
-So now we have gone to the pain of writing this documentation we need to make sure its used as a reference
-for discussion, and regularly updated.
+Now that we have gone to the pain of writing all this documentation, we need to make sure its used 
+as a reference for discussion, and regularly updated.
 
 It sounds like a big undertaking but this may actually be something you are already doing and the only
 change we need to make is to add focus to particular meetings where documentation could be used to help 
