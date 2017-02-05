@@ -13,13 +13,13 @@ Aaaand 15 minutes later...
 
 ![NPM](/images/node-rage/npm-terminal.png)
 
-...I’m still watching this spinning thing, with no idea what the fuck is going on.
+...I’m still watching this spinning thing, with no idea what the hell is going on.
 
-Fuck you nodejs. You ruin everything. I’m going to make a coffee while I try to calm my incandescent rage.
+Dammit nodejs. You ruin everything. I’m going to make a coffee while I try to calm my incandescent rage.
 
-I’m back and npm has finally agreed to release the 8 cores it’s been holding hostage for the last 15 minutes while installing the 4 packages I’ve asked for. 
-Now I can start my project! Like Alice, I dive further in this rabbit hole of chaos and “webpack” my single solitary .jsx project file 
-(The webpack config file itself is already the size and complexity of a medium sized application. *Note to self: refactor config file*). 
+I’m back and npm has finally agreed to release the 8 cores it’s been holding hostage for the last 15 minutes while installing the 4 packages I’ve asked for.
+Now I can start my project! Like Alice, I dive further in this rabbit hole of chaos and “webpack” my single solitary .jsx project file
+(The webpack config file itself is already the size and complexity of a medium sized application. *Note to self: refactor config file*).
 
     ./node_modules/.bin/webpack
 
@@ -49,13 +49,11 @@ For good measure, I’ve decided to upgrade my version of node and npm too. Than
 
 After another npm install and yet another coffee, my index file has been webpacked. Whatever that is. Maybe I’ll take a look in the “transpiled” file it built to see if I can spot my few lines of code.
 
-I can’t. 
+I can’t.
 
-But what I can spot is 21,788 lines of JavaScript, in a file that’s 731Kb. Are you shitting me? How am I supposed to deliver that to the users? On a memory stick?
+But what I can spot is 21,788 lines of JavaScript, in a file that’s 731Kb. Are you joking!? How am I supposed to deliver that to the users? On a memory stick?
 
-Anyway, I opened it in my browser and it worked. Fucking brilliant.
+Anyway, I opened it in my browser and it worked. Brilliant.
 
 
 ![NPM](/images/node-rage/todo-app-shot.png)
-
-

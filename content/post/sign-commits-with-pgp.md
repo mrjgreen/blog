@@ -4,12 +4,11 @@ title = "Sign Your Commits with PGP Keys"
 tags = []
 
 +++
-
 Did you know that anyone with access to a Git repository can commit code as you, just by changing their git user details?
 
-Imagine if a disgruntled colleague introduced a critical security vulnerability, or added malicious code under your name... how would you be able to prove it wasn't you?
-
-<!-- more -->
+Imagine if a disgruntled colleague introduced a critical security vulnerability, or added malicious code under your name...
+how would you be able to prove it wasn't you?
+<!--more-->
 
 ### PGP Keys
 
