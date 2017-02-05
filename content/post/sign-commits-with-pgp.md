@@ -38,10 +38,10 @@ use the key to verify the signature.
 
 ### Generating Your PGP Key
 
-To get started, lets install the GPG program via your package manager. On MacOS we will also need to install a program
+To get started, lets install the GPG program via your package manager. On macOS we will also need to install a program
 to manage a secure password prompt for the gpg program:
 
-    # MacOS users:
+    # macOS users:
     brew install gpg
     brew install pinentry-mac
 
@@ -130,4 +130,14 @@ sub   4096R/BC6E7C42 2017-02-03
 
 ### Using Your Key With Git
 
-Now you have an active PGP key you will be able to
+Now you have an active PGP key you will be able to use it to sign your commits.
+
+In order to allow us to enter our passphrase on macOS we will need to enable the pinentry program we installed earlier.
+
+    echo "pinentry-program /usr/local/bin/pinentry-mac" > ~/.gnupg/gpg-agent.conf
+
+
+> Provided you have used the same email address in your PGP key identity as you have in your git user config,
+your key will automatically be detected when you perform a git commit.
+
+    git commit --gpg-sign -m "Commit message here"
