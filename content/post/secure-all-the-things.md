@@ -28,7 +28,7 @@ as many attempts as they like against an offline resource. For these, a
 
 ### Multi-factor Authentication
 
-Two factor authentication is a method of provide a secondary access code along with your password, using a
+Two factor authentication adds the requirement for a one-time-passcode along with your password, generated using a
 registered device such as your laptop or smartphone. Without access to this device, a potential attacker will be
 unable to authenticate against your accounts even if they have your password.
 
