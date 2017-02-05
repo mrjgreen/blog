@@ -2,7 +2,6 @@
 date = "2017-02-04T09:03:56Z"
 title = "Sign Your Commits with PGP Keys"
 tags = []
-draft = true
 
 +++
 
@@ -141,3 +140,34 @@ In order to allow us to enter our passphrase on macOS we will need to enable the
 your key will automatically be detected when you perform a git commit.
 
     git commit --gpg-sign -m "Commit message here"
+
+Alternatively you can enable automatic commit signing by running:
+
+   git config --global commit.gpgsign true
+
+### Some Considerations
+
+##### Signature Omission
+
+Signed commits only provide evidence that a commit with a valid signature was made by you.
+In the case of a commit being made under your name with no signature, your PGP key will go no way at all to proving
+it wasn't you.
+
+For this system of signed commits to work, there must exist a policy to prevent or immediately investigate
+any instance of a commit with a missing or invalid signature. This can even be automated using git commit hooks.
+
+##### Keep Your Private Key Safe
+
+PGP signing keys are in fact made up of two parts: a private key allowing you to sign messages and a public key
+allowing others to verify your signature is valid.
+
+As the names suggest, you can (and in fact must) freely distribute your public key, but it is essential that your
+private key is never ever revealed.
+
+The validity of your signatures is only as good as the security of your private key. If your key is compromised, then
+anyone can sign messages on your behalf and what's more, the presence of the signature is strong evidence that it really
+did originate from you!
+
+If you lose your private key, you should revoke it immediately using a revocation key which you must store and
+keep in a safe place. This is beyond the scope of this post, but I intend to cover PGP keys in more detail in
+future posts. In the meantime there plenty of great resources out there already.
