@@ -142,7 +142,7 @@ your key will automatically be detected when you perform a git commit.
 
 Alternatively you can enable automatic commit signing by running:
 
-   git config --global commit.gpgsign true
+    git config --global commit.gpgsign true
 
 ### Some Considerations
 
